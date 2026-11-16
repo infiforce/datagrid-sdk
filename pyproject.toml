@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "datagrid-sdk"
+version = "0.1.0"
+description = "Datagrid SDK and CLI for downloading dataset episode artifacts"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "Proprietary" }
+authors = [{ name = "Infiforce" }]
+keywords = ["datagrid", "dataset", "download", "cli", "sdk", "lerobot", "mcap"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: Other/Proprietary License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries",
+]
+dependencies = [
+    "requests>=2.31.0,<3",
+]
+
+[project.scripts]
+datagrid = "datagrid.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/infiforce/datagrid-sdk"
+Documentation = "https://github.com/infiforce/datagrid-sdk#readme"
+Issues = "https://github.com/infiforce/datagrid-sdk/issues"
+
+[tool.setuptools.packages.find]
+include = ["datagrid*"]
